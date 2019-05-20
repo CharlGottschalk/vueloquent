@@ -1,0 +1,28 @@
+{
+  "name": "vueloquent",
+  "version": "0.0.1",
+  "description": "Query your Laravel database from Vue using an Eloquent-like syntax.",
+  "keywords": [
+    "eloquent",
+    "laravel",
+    "vue",
+    "vueloquent"
+  ],
+  "author": "Charl Gottschalk",
+  "license": "MIT",
+  "main": "dist/vueloquent.js",
+  "dependencies": {
+    "axios": "^0.18.0"
+  },
+  "devDependencies": {
+    "cross-env": "^5.2.0",
+    "laravel-mix": "^4.0.15",
+    "vue-template-compiler": "^2.6.10"
+  },
+  "scripts": {
+    "dev": "npm run development",
+    "development": "cross-env NODE_ENV=development node_modules/webpack/bin/webpack.js --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js",
+    "prod": "npm run production",
+    "production": "cross-env NODE_ENV=production node_modules/webpack/bin/webpack.js --no-progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js"
+  }
+}

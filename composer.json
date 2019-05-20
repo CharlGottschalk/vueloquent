@@ -1,0 +1,29 @@
+{
+  "name": "charlgottschalk/vueloquent",
+  "description": "Query your Laravel application database in Vue with an Eloquent-like syntax.",
+  "type": "library",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Charl Gottschalk",
+      "email": "online@charlg.co.za"
+    }
+  ],
+  "autoload": {
+    "psr-4": {
+      "CharlGottschalk\\Vueloquent\\": "src/"
+    }
+  },
+  "extra": {
+    "laravel": {
+      "providers": [
+        "CharlGottschalk\\Vueloquent\\VueloquentServiceProvider"
+      ]
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "CharlGottschalk\\Vueloquent\\Test\\": "tests"
+    }
+  }
+}
