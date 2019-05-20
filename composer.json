@@ -1,6 +1,6 @@
 {
   "name": "charlgottschalk/vueloquent",
-  "description": "Query your Laravel application database in Vue with an Eloquent-like syntax.",
+  "description": "Vueloquent brings Laravel's DB queries to the front-end.",
   "type": "library",
   "license": "MIT",
   "authors": [
@@ -19,11 +19,6 @@
       "providers": [
         "CharlGottschalk\\Vueloquent\\VueloquentServiceProvider"
       ]
-    }
-  },
-  "autoload-dev": {
-    "psr-4": {
-      "CharlGottschalk\\Vueloquent\\Test\\": "tests"
     }
   }
 }
