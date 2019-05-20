@@ -1,5 +1,7 @@
 # Vueloquent
 
+[![Latest Stable Version](https://poser.pugx.org/charlgottschalk/vueloquent/v/stable)](https://packagist.org/packages/charlgottschalk/vueloquent) [![Total Downloads](https://poser.pugx.org/charlgottschalk/vueloquent/downloads)](https://packagist.org/packages/charlgottschalk/vueloquent) [![License](https://poser.pugx.org/charlgottschalk/vueloquent/license)](https://packagist.org/packages/charlgottschalk/vueloquent)
+
 Vueloquent brings Laravel's DB queries syntax to the front-end as a Vue plugin or plain JavaScript module.
 
 Using Vueloquent, you don't need to create a route for every resource/model you want to query.
