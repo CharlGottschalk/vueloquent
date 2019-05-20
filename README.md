@@ -6,13 +6,14 @@ Using Vueloquent, you don't need to create a route for every resource/model you 
 Just create a single route and retrieve data easily like:
 
 ```javascript
-Vue.eloquent.from('User').find(1);
+Vue.eloquent.token('api_token').at('endpoint').from('User').find(1);
 ```
 
 or
 
 ```javascript
-Vue.eloquent
+$v.token('api_token')
+  .at('endpoint')
   .from('User')
   .with('posts')
   .where('published', true)
@@ -46,6 +47,8 @@ Include the self-installing plugin after Vue.
 <script src="/js/vendor/vueloquent/vueloquent-vue.js"></script>
 ```
 
+Once loaded, you will be able to access Vueloquent globally in your Vue instances at `Vue.eloquent`.
+
 *If you're using plain JavaScript*
 
 ```
@@ -57,17 +60,26 @@ Include the script before your closing `</body>` tag.
 <script src="/js/vendor/vueloquent/vueloquent.js"></script>
 ```
 
-### Vue Plugin
-
-Once loaded, you will be able to access Vueloquent globally in your Vue instances at `Vue.eloquent`.
-
-### Plain JS Module
-
 Once loaded, you will be able to access Vueloquent at `$v`.
+
+## Route Setup
+
+You will need to create a `post` route that will handle all Vueloquent queries. I suggest creating an api route in your `routes\api.php` file.
+
+```php
+use Illuminate\Http\Request;
+use CharlGottschalk\Vueloquent\VueloquentHandler;
+
+Route::middleware('auth:api')->post('[vueloquent_route]', function (Request $request, VueloquentHandler $handler) {
+    return $handler->handle($request);
+});
+```
+
+*Replace `[vueloquent_route]` with the endpoint you wish.*
 
 ## Documentation
 
-For more in-depth documentation, please visit the [wiki](LICENSE).
+For more in-depth documentation, please visit the [wiki](https://github.com/CharlGottschalk/vueloquent/wiki).
 
 ## License
 
