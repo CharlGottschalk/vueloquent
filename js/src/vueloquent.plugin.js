@@ -1,3 +1,4 @@
+import axios from 'axios';
 import core from './_core';
 import final from './_final';
 import query from './_query';
@@ -14,4 +15,7 @@ export default Vueloquent;
 
 if (typeof window !== 'undefined' && Vue) {
   Vue.use(Vueloquent);
+  if (!window.axios) {
+    window.axios = axios;
+  }
 }

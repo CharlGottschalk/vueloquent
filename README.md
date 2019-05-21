@@ -2,7 +2,7 @@
 
 [![Latest Stable Version](https://poser.pugx.org/charlgottschalk/vueloquent/v/stable)](https://packagist.org/packages/charlgottschalk/vueloquent) [![Total Downloads](https://poser.pugx.org/charlgottschalk/vueloquent/downloads)](https://packagist.org/packages/charlgottschalk/vueloquent) [![License](https://poser.pugx.org/charlgottschalk/vueloquent/license)](https://packagist.org/packages/charlgottschalk/vueloquent)
 
-Vueloquent brings Laravel's DB queries syntax to the front-end as a Vue plugin or plain JavaScript module.
+Vueloquent brings Laravel's DB queries to the front-end as a Vue plugin or plain JavaScript module.
 
 Using Vueloquent, you don't need to create a route for every resource/model you want to query.
 Just create a single route and retrieve data easily like:
@@ -46,7 +46,7 @@ php artisan vendor:publish --tag=vueloquent-vue
 Include the self-installing plugin after Vue.
 ```html
 <script src="/js/app.js"></script>
-<script src="/js/vendor/vueloquent/vueloquent-vue.js"></script>
+<script src="/js/vendor/vueloquent/vueloquent.plugin.js"></script>
 ```
 
 Once loaded, you will be able to access Vueloquent globally in your Vue instances at `Vue.eloquent`.
@@ -59,7 +59,7 @@ php artisan vendor:publish --tag=vueloquent-js
 
 Include the script before your closing `</body>` tag.
 ```html
-<script src="/js/vendor/vueloquent/vueloquent.js"></script>
+<script src="/js/vendor/vueloquent/vueloquent.plain.js"></script>
 ```
 
 Once loaded, you will be able to access Vueloquent at `$v`.

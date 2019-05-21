@@ -81,7 +81,7 @@
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 1);
+/******/ 	return __webpack_require__(__webpack_require__.s = 0);
 /******/ })
 /************************************************************************/
 /******/ ({
@@ -2289,10 +2289,10 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
-/***/ "./src/vueloquent.js":
-/*!***************************!*\
-  !*** ./src/vueloquent.js ***!
-  \***************************/
+/***/ "./src/vueloquent.plugin.js":
+/*!**********************************!*\
+  !*** ./src/vueloquent.plugin.js ***!
+  \**********************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -2311,35 +2311,34 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 
 
 
-var ready = {
-  ready: function ready(fn) {
-    if (document.attachEvent ? document.readyState === 'complete' : document.readyState !== 'loading') {
-      fn();
-    } else {
-      document.addEventListener('DOMContentLoaded', fn);
-    }
+
+var eloquent = _objectSpread({}, _core__WEBPACK_IMPORTED_MODULE_1__["default"], _query__WEBPACK_IMPORTED_MODULE_3__["default"], _final__WEBPACK_IMPORTED_MODULE_2__["default"]);
+
+var Vueloquent = {
+  install: function install(Vue) {
+    Vue.eloquent = eloquent;
   }
 };
-
-var Vueloquent = _objectSpread({}, ready, _core__WEBPACK_IMPORTED_MODULE_1__["default"], _query__WEBPACK_IMPORTED_MODULE_3__["default"], _final__WEBPACK_IMPORTED_MODULE_2__["default"]);
-
 /* harmony default export */ __webpack_exports__["default"] = (Vueloquent);
 
-if (typeof window !== 'undefined') {
-  window.axios = axios__WEBPACK_IMPORTED_MODULE_0___default.a;
-  window.$v = Vueloquent;
+if (typeof window !== 'undefined' && Vue) {
+  Vue.use(Vueloquent);
+
+  if (!window.axios) {
+    window.axios = axios__WEBPACK_IMPORTED_MODULE_0___default.a;
+  }
 }
 
 /***/ }),
 
-/***/ 1:
-/*!*********************************!*\
-  !*** multi ./src/vueloquent.js ***!
-  \*********************************/
+/***/ 0:
+/*!****************************************!*\
+  !*** multi ./src/vueloquent.plugin.js ***!
+  \****************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! C:\Development\Personal\vueloquent_dev\vueloquent\js\src\vueloquent.js */"./src/vueloquent.js");
+module.exports = __webpack_require__(/*! C:\Development\Personal\vueloquent_dev\vueloquent\js\src\vueloquent.plugin.js */"./src/vueloquent.plugin.js");
 
 
 /***/ })

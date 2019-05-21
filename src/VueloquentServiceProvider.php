@@ -22,13 +22,13 @@ class VueloquentServiceProvider extends ServiceProvider
         );
 
         $this->publishes(
-            [__DIR__.'/../js/dist/vueloquent-vue.js' => public_path(config('vueloquent.public_js') . '/vendor/vueloquent/vueloquent-vue.js')],
-            'vueloquent-vue'
+            [__DIR__.'/../js/dist/vueloquent.plugin.js' => public_path(config('vueloquent.public_js') . '/vendor/vueloquent/vueloquent.plugin.js')],
+            'vueloquent-plugin'
         );
 
         $this->publishes(
-            [__DIR__.'/../js/dist/vueloquent.js' => public_path(config('vueloquent.public_js') . '/vendor/vueloquent/vueloquent.js')],
-            'vueloquent-js'
+            [__DIR__.'/../js/dist/vueloquent.plain.js' => public_path(config('vueloquent.public_js') . '/vendor/vueloquent/vueloquent.plain.js')],
+            'vueloquent-plain'
         );
     }
 

@@ -1,4 +1,4 @@
 {
-    "/dist/vueloquent.js": "/dist/vueloquent.js",
-    "/dist/vueloquent-vue.js": "/dist/vueloquent-vue.js"
+    "/dist/vueloquent.plain.js": "/dist/vueloquent.plain.js",
+    "/dist/vueloquent.plugin.js": "/dist/vueloquent.plugin.js"
 }

@@ -22,6 +22,8 @@ const Vueloquent = { ...ready, ...core, ...query, ...final };
 export default Vueloquent;
 
 if (typeof window !== 'undefined') {
-  window.axios = axios;
   window.$v = Vueloquent;
+  if (!window.axios) {
+    window.axios = axios;
+  }
 }
