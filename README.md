@@ -37,7 +37,7 @@ composer require charlgottschalk/vueloquent
 
 2. Publish the Vueloquent plugin
 
-*If you're using Vue*
+#### If you're using Vue
 
 ```
 php artisan vendor:publish --tag=vueloquent-vue
@@ -51,7 +51,7 @@ Include the self-installing plugin after Vue.
 
 Once loaded, you will be able to access Vueloquent globally in your Vue instances at `Vue.eloquent`.
 
-*If you're using plain JavaScript*
+#### If you're using plain JavaScript
 
 ```
 php artisan vendor:publish --tag=vueloquent-js
@@ -82,6 +82,11 @@ Route::middleware('auth:api')->post('[vueloquent_route]', function (Request $req
 ## Documentation
 
 For more in-depth documentation, please visit the [wiki](https://github.com/CharlGottschalk/vueloquent/wiki).
+
+## To Do:
+
+- [ ] Query Denials
+- [ ] Authorization Handling
 
 ## License
 
