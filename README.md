@@ -2,10 +2,9 @@
 
 [![Latest Stable Version](https://poser.pugx.org/charlgottschalk/vueloquent/v/stable)](https://packagist.org/packages/charlgottschalk/vueloquent) [![Total Downloads](https://poser.pugx.org/charlgottschalk/vueloquent/downloads)](https://packagist.org/packages/charlgottschalk/vueloquent) [![License](https://poser.pugx.org/charlgottschalk/vueloquent/license)](https://packagist.org/packages/charlgottschalk/vueloquent)
 
-Vueloquent brings Laravel's DB queries to the front-end as a Vue plugin or plain JavaScript module.
+Vueloquent brings Laravel's query builder to the front-end as a Vue plugin or plain JavaScript module, providing the same convenient, fluent interface for creating and running database queries all while using a single route to handle queries for all models.
 
-Using Vueloquent, you don't need to create a route for every resource/model you want to query.
-Just create a single route and retrieve data easily like:
+#### Example:
 
 ```javascript
 Vue.eloquent.token('api_token').at('endpoint').from('User').find(1);
@@ -14,7 +13,8 @@ Vue.eloquent.token('api_token').at('endpoint').from('User').find(1);
 or
 
 ```javascript
-$v.token('api_token')
+$v
+  .token('api_token')
   .at('endpoint')
   .from('User')
   .with('posts')
